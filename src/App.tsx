@@ -1,6 +1,8 @@
 import PrintValue from "./components/PrintValue";
+import Button from "./components/ui/Button";
 import User from "./components/User";
 import User2 from "./components/User2";
+import UserProfile from "./components/UserProfile";
 
 export default function App() {
   // 기본 자료형 출력
@@ -38,9 +40,20 @@ export default function App() {
     age: 28,
     gender: "male",
   };
+
+
   return (
     // <> : React.Fragment 와 같은 의미 (전체 감싸기 용도)
     <>
+      <h1>UserProfile</h1>
+      <UserProfile name="Alice" age={30} isAdmin={true} />
+      <UserProfile name="Bob" age={25} isAdmin={false} />
+      <hr />
+
+      <h1>Children</h1>
+      <Button />
+      <hr />
+
       <h1>스프레드 연산자 활용하기</h1>
       <User userObj={userObj} />
       <User2 {...userObj} /> {/* 전개 연산자 : userObj 객체의 모든 속성을 개별 props로 전달 */}
