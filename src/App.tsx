@@ -32,7 +32,7 @@ export default function App() {
   const booleanValue = true;
   const arrayValue = [10, 20, 30];
   const objectValue = { name: "John Doe", age: 30 };
-  const handleClick = () => alert("버튼이 클릭되었습니다.");
+  const handleClick = (message: string) => alert(message);
 
   // 스프레드 연산자 활용
   const userObj = { 
@@ -51,8 +51,8 @@ export default function App() {
       <hr />
 
       <h1>Children</h1>
-      <Button message="Playing!">Play Children</Button>
-      <Button message="Uploading!">Upload Image</Button>
+      <Button handleClick={handleClick} message="Playing!" >Play Children</Button>
+      <Button handleClick={(message: string) => alert(message)} message="Uploading!" >Upload Image</Button>
       <hr />
 
       <h1>스프레드 연산자 활용하기</h1>
