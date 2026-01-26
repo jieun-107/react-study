@@ -51,7 +51,8 @@ export default function App() {
       <hr />
 
       <h1>Children</h1>
-      <Button />
+      <Button message="Playing!">Play Children</Button>
+      <Button message="Uploading!">Upload Image</Button>
       <hr />
 
       <h1>스프레드 연산자 활용하기</h1>
