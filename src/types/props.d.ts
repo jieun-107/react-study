@@ -6,5 +6,5 @@ type PrintValueProps = {
   booleanValue: boolean;
   arrayValue: number[];
   objectValue: { name: string; age: number};
-  handleClick: () => void;
+  handleClick: (message: string) => void;
 }

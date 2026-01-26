@@ -1,5 +1,7 @@
 import PrintValue from "./components/PrintValue";
 import Button from "./components/ui/Button";
+import Button2 from "./components/ui/Button2";
+import Button3 from "./components/ui/Button3";
 import User from "./components/User";
 import User2 from "./components/User2";
 import UserProfile from "./components/UserProfile";
@@ -41,10 +43,22 @@ export default function App() {
     gender: "male",
   };
 
+  // 이벤트 객체 전달
+  const handleClick2 = (
+    message: string,
+    event:React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
+    event.currentTarget.innerText = message;
+  };
 
   return (
     // <> : React.Fragment 와 같은 의미 (전체 감싸기 용도)
     <>
+      <h1>이벤트 객체</h1>
+      <Button2 />
+      <Button3 handleClick2={handleClick2} />
+      <hr />
+
       <h1>UserProfile</h1>
       <UserProfile name="Alice" age={30} isAdmin={true} />
       <UserProfile name="Bob" age={25} isAdmin={false} />
