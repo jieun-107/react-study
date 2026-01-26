@@ -1,5 +1,6 @@
 import PrintValue from "./components/PrintValue";
 import User from "./components/User";
+import User2 from "./components/User2";
 
 export default function App() {
   // 기본 자료형 출력
@@ -31,9 +32,21 @@ export default function App() {
   const objectValue = { name: "John Doe", age: 30 };
   const handleClick = () => alert("버튼이 클릭되었습니다.");
 
+  // 스프레드 연산자 활용
+  const userObj = { 
+    name: "Jane", 
+    age: 28,
+    gender: "male",
+  };
   return (
     // <> : React.Fragment 와 같은 의미 (전체 감싸기 용도)
     <>
+      <h1>스프레드 연산자 활용하기</h1>
+      <User userObj={userObj} />
+      <User2 {...userObj} /> {/* 전개 연산자 : userObj 객체의 모든 속성을 개별 props로 전달 */}
+      {/* <User2 name="Jane" age={28} gender="male" /> 위와 동일 */}
+      <hr />
+
       <h1>컴포넌트에 다양한 자료형의 props 전달 </h1>
       <PrintValue 
         numberValue={numberValue}
@@ -45,7 +58,7 @@ export default function App() {
       />
 
       {/* props를 사용하여 컴포넌트에 데이터 전달. 숫자형은 {}로 감싸야 함 */}
-      <User name="Jack" age={20} /> 
+      {/* <User name="Jack" age={20} />  */}
       {/* <User name="Mike" age={25} />  */}
 
       <hr />
