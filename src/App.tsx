@@ -52,9 +52,20 @@ export default function App() {
     event.currentTarget.innerText = message;
   };
 
+  // 이벤트 기본 동작 막기
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
     // <> : React.Fragment 와 같은 의미 (전체 감싸기 용도)
     <>
+      <h1>이벤트 기본 동작 막기</h1>
+      <form action="" onSubmit={handleSubmit}>
+        <a href="https://www.naver.com/" onClick={(event) => event.preventDefault()}>네이버</a>
+        <button type="submit">전송</button>
+      </form>
+
       <h1>이벤트 전파 - 버블링/캡처링</h1>
       <Table />
       <hr />
