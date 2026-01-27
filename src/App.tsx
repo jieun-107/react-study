@@ -1,4 +1,5 @@
 import PrintValue from "./components/PrintValue";
+import Table from "./components/Table";
 import Button from "./components/ui/Button";
 import Button2 from "./components/ui/Button2";
 import Button3 from "./components/ui/Button3";
@@ -54,6 +55,10 @@ export default function App() {
   return (
     // <> : React.Fragment 와 같은 의미 (전체 감싸기 용도)
     <>
+      <h1>이벤트 전파 - 버블링/캡처링</h1>
+      <Table />
+      <hr />
+
       <h1>이벤트 객체</h1>
       <Button2 />
       <Button3 handleClick2={handleClick2} />
