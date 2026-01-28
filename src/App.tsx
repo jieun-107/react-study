@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Counter from "./components/section6/Counter";
 import Ex01 from "./components/section6/Ex01";
 import Ex02 from "./components/section6/Ex02";
@@ -5,8 +6,12 @@ import Ex03 from "./components/section6/Ex03";
 import Ex04 from "./components/section6/Ex04";
 import Ex05 from "./components/section6/Ex05";
 import Ex06 from "./components/section6/Ex06";
+import FirstCount from "./components/section6/FirstCount";
+import SecondCount from "./components/section6/SecondCount";
 
 export default function App() {
+  // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
+  const [count, setCount] = useState(0);
   return (
     <>
       {/* <Ex01 /> */}
@@ -15,7 +20,9 @@ export default function App() {
       {/* <Counter /> */}
       {/* <Ex04/> */}
       {/* <Ex05 /> */}
-      <Ex06 />
+      {/* <Ex06 /> */}
+      <FirstCount count={count} setCount={setCount} />
+      <SecondCount count={count} setCount={setCount} />
     </>
   );
 }
