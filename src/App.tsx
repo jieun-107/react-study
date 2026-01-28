@@ -12,6 +12,10 @@ import SecondCount from "./components/section6/SecondCount";
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
   const [count, setCount] = useState(0);
+  // 상태 업데이트 로직을 함수 내부에 작성하여 외부의 접근을 막아 캡슐화
+  const handleIncrement = () => {
+    setCount((count) => count + 1)
+  }
   return (
     <>
       {/* <Ex01 /> */}
@@ -21,8 +25,8 @@ export default function App() {
       {/* <Ex04/> */}
       {/* <Ex05 /> */}
       {/* <Ex06 /> */}
-      <FirstCount count={count} setCount={setCount} />
-      <SecondCount count={count} setCount={setCount} />
+      <FirstCount count={count} handleIncrement={handleIncrement} />
+      <SecondCount count={count} handleIncrement={handleIncrement} />
     </>
   );
 }

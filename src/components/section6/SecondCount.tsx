@@ -1,11 +1,10 @@
-import { type Dispatch, type SetStateAction } from "react";
 
 export default function SecondCount({
   count, 
-  setCount
+  handleIncrement
 }: { 
   count: number; 
-  setCount: Dispatch<SetStateAction<number>>; 
+  handleIncrement: () => void;
 }) {
   // console.log("SecondCount");
   // 컴포넌트 내에 정의된 상태변수는 컴포넌트 내에서만 유효함
@@ -13,7 +12,7 @@ export default function SecondCount({
   return (
     <>
       <h1>SecondCount Component: {count}</h1>
-      <button onClick={() => setCount((count) => count + 1)}>increment</button>
+      <button onClick={handleIncrement}>increment</button>
     </>
   )
 }
