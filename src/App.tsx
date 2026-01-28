@@ -8,6 +8,7 @@ import Ex05 from "./components/section6/Ex05";
 import Ex06 from "./components/section6/Ex06";
 import FirstCount from "./components/section6/FirstCount";
 import SecondCount from "./components/section6/SecondCount";
+import Count from "./components/section6/Count";
 
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
@@ -25,8 +26,9 @@ export default function App() {
       {/* <Ex04/> */}
       {/* <Ex05 /> */}
       {/* <Ex06 /> */}
-      <FirstCount count={count} handleIncrement={handleIncrement} />
-      <SecondCount count={count} handleIncrement={handleIncrement} />
+      {/* <FirstCount count={count} handleIncrement={handleIncrement} />
+      <SecondCount count={count} handleIncrement={handleIncrement} /> */}
+      <Count />
     </>
   );
 }
