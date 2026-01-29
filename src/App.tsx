@@ -18,6 +18,7 @@ import Ex05 from "./components/section7/Ex05";
 import Ex06 from "./components/section7/Ex06";
 import Ex07 from "./components/section7/Ex07";
 import Notification from "./components/section7/Notification";
+import Ex08 from "./components/section7/Ex08";
 
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
@@ -49,7 +50,8 @@ export default function App() {
       {/* <Ex05 /> */}
       {/* <Ex06 /> */}
       {/* <Ex07 /> */}
-      <Notification />
+      {/* <Notification /> */}
+      <Ex08 />
     </>
   );
 }
