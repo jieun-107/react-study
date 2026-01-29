@@ -22,6 +22,7 @@ import Ex08 from "./components/section7/Ex08";
 import FruitList from "./components/section7/FruitList";
 import Ex09 from "./components/section7/Ex09";
 import Ex10 from "./components/section7/Ex10";
+import RecipeList from "./components/section7/RecipeList";
 
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
@@ -57,7 +58,8 @@ export default function App() {
       {/* <Ex08 /> */}
       {/* <FruitList /> */}
       {/* <Ex09 /> */}
-      <Ex10 />
+      {/* <Ex10 /> */}
+      <RecipeList />
     </>
   );
 }
