@@ -28,6 +28,7 @@ import Checkbox from "./components/controlled/Checkbox";
 import Radio from "./components/controlled/Radio";
 import Textarea from "./components/controlled/Textarea";
 import UserInfoForm from "./components/controlled/UserInfoForm";
+import UserInfoForm2 from "./components/controlled/UserInfoForm2";
 
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
@@ -71,7 +72,8 @@ export default function App() {
       {/* <Checkbox /> */}
       {/* <Radio /> */}
       {/* <Textarea /> */}
-      <UserInfoForm />
+      {/* <UserInfoForm /> */}
+      <UserInfoForm2 />
     </>
   );
 }
