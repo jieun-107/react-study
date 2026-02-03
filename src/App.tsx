@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./components/uncontrolled/Input";
+import Checkbox from "./components/uncontrolled/Checkbox";
 // import Counter from "./components/section6/Counter";
 // import Ex01 from "./components/section6/Ex01";
 // import Ex02 from "./components/section6/Ex02";
@@ -69,13 +70,16 @@ export default function App() {
       {/* <RecipeList /> */}
 
       {/* ===================== Section 10 =================== */}
+      {/* 제어 컴포넌트 */}
       {/* <Input /> */}
       {/* <Checkbox /> */}
       {/* <Radio /> */}
       {/* <Textarea /> */}
       {/* <UserInfoForm /> */}
       {/* <UserInfoForm2 /> */}
-      <Input />
+      {/* 비제어 컴포넌트 */}
+      {/* <Input /> */}
+      <Checkbox />
     </>
   );
 }
