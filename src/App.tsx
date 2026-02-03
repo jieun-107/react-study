@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "./components/uncontrolled/Input";
 // import Counter from "./components/section6/Counter";
 // import Ex01 from "./components/section6/Ex01";
 // import Ex02 from "./components/section6/Ex02";
@@ -10,25 +11,25 @@ import { useState } from "react";
 // import SecondCount from "./components/section6/SecondCount";
 // import Count from "./components/section6/Count";
 // import Ex07 from "./components/section6/Ex07";
-import Ex01 from "./components/section7/Ex01";
-import Ex02 from "./components/section7/Ex02";
-import Ex03 from "./components/section7/Ex03";
-import Ex04 from "./components/section7/Ex04";
-import Ex05 from "./components/section7/Ex05";
-import Ex06 from "./components/section7/Ex06";
-import Ex07 from "./components/section7/Ex07";
-import Notification from "./components/section7/Notification";
-import Ex08 from "./components/section7/Ex08";
-import FruitList from "./components/section7/FruitList";
-import Ex09 from "./components/section7/Ex09";
-import Ex10 from "./components/section7/Ex10";
-import RecipeList from "./components/section7/RecipeList";
-import Input from "./components/controlled/Input";
-import Checkbox from "./components/controlled/Checkbox";
-import Radio from "./components/controlled/Radio";
-import Textarea from "./components/controlled/Textarea";
-import UserInfoForm from "./components/controlled/UserInfoForm";
-import UserInfoForm2 from "./components/controlled/UserInfoForm2";
+// import Ex01 from "./components/section7/Ex01";
+// import Ex02 from "./components/section7/Ex02";
+// import Ex03 from "./components/section7/Ex03";
+// import Ex04 from "./components/section7/Ex04";
+// import Ex05 from "./components/section7/Ex05";
+// import Ex06 from "./components/section7/Ex06";
+// import Ex07 from "./components/section7/Ex07";
+// import Notification from "./components/section7/Notification";
+// import Ex08 from "./components/section7/Ex08";
+// import FruitList from "./components/section7/FruitList";
+// import Ex09 from "./components/section7/Ex09";
+// import Ex10 from "./components/section7/Ex10";
+// import RecipeList from "./components/section7/RecipeList";
+// import Input from "./components/controlled/Input";
+// import Checkbox from "./components/controlled/Checkbox";
+// import Radio from "./components/controlled/Radio";
+// import Textarea from "./components/controlled/Textarea";
+// import UserInfoForm from "./components/controlled/UserInfoForm";
+// import UserInfoForm2 from "./components/controlled/UserInfoForm2";
 
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
@@ -73,7 +74,8 @@ export default function App() {
       {/* <Radio /> */}
       {/* <Textarea /> */}
       {/* <UserInfoForm /> */}
-      <UserInfoForm2 />
+      {/* <UserInfoForm2 /> */}
+      <Input />
     </>
   );
 }
