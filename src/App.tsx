@@ -23,6 +23,11 @@ import FruitList from "./components/section7/FruitList";
 import Ex09 from "./components/section7/Ex09";
 import Ex10 from "./components/section7/Ex10";
 import RecipeList from "./components/section7/RecipeList";
+import Input from "./components/controlled/Input";
+import Checkbox from "./components/controlled/Checkbox";
+import Radio from "./components/controlled/Radio";
+import Textarea from "./components/controlled/Textarea";
+import UserInfoForm from "./components/controlled/UserInfoForm";
 
 export default function App() {
   // 상태 끌어올리기 패턴 : 부모 컴포넌트에서 공통 상태와 업데이트 함수를 정의하여 자식 컴포넌트에 전달
@@ -59,7 +64,14 @@ export default function App() {
       {/* <FruitList /> */}
       {/* <Ex09 /> */}
       {/* <Ex10 /> */}
-      <RecipeList />
+      {/* <RecipeList /> */}
+
+      {/* ===================== Section 10 =================== */}
+      {/* <Input /> */}
+      {/* <Checkbox /> */}
+      {/* <Radio /> */}
+      {/* <Textarea /> */}
+      <UserInfoForm />
     </>
   );
 }
