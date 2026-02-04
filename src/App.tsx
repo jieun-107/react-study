@@ -3,6 +3,7 @@ import Input from "./components/uncontrolled/Input";
 import Checkbox from "./components/uncontrolled/Checkbox";
 import Radio from "./components/uncontrolled/Radio";
 import Textarea from "./components/uncontrolled/Textarea";
+import UserInfoForm from "./components/uncontrolled/UserInfoForm";
 // import Counter from "./components/section6/Counter";
 // import Ex01 from "./components/section6/Ex01";
 // import Ex02 from "./components/section6/Ex02";
@@ -84,7 +85,8 @@ export default function App() {
       {/* <Input /> */}
       {/* <Checkbox /> */}
       {/* <Radio /> */}
-      <Textarea />
+      {/* <Textarea /> */}
+      <UserInfoForm />
     </>
   );
 }
