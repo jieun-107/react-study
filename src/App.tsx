@@ -5,6 +5,7 @@ import Radio from "./components/uncontrolled/Radio";
 import Textarea from "./components/uncontrolled/Textarea";
 import UserInfoForm from "./components/uncontrolled/UserInfoForm";
 import Ex01 from "./components/section10/Ex01";
+import Login from "./components/section10/Login";
 // import Counter from "./components/section6/Counter";
 // import Ex01 from "./components/section6/Ex01";
 // import Ex02 from "./components/section6/Ex02";
@@ -88,7 +89,8 @@ export default function App() {
       {/* <Radio /> */}
       {/* <Textarea /> */}
       {/* <UserInfoForm /> */}
-      <Ex01 />
+      {/* <Ex01 /> */}
+      <Login />
     </>
   );
 }
