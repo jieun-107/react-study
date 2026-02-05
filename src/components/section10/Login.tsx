@@ -1,36 +1,42 @@
 import { useState } from "react";
+import { validateEmail } from "../../utils/validation";
+import { validatePassword } from "../../utils/validation";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(localStorage.getItem("email") || "");
   const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  const [rememberMe, setRememberMe] = useState(localStorage.getItem("rememberMe") === "true");
   const [visible, setVisible] = useState(false); 
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   
-  const emailError = (value: string) => {
-    if (!value) return;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      return "이메일이 유효하지 않습니다.";
-    }
+  // const emailError = (value: string) => {
+  //   if (!value) return;
+  //   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+  //     return "이메일이 유효하지 않습니다.";
+  //   }
 
-  }
-  const emailErrorMsg = emailError(email);
+  // }
+  // const emailErrorMsg = validateEmail(email) ? "" : "이메일이 유효하지 않습니다.";
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+    setEmailError(validateEmail(e.target.value) ? "" : "이메일이 유효하지 않습니다.");
   }
   
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
+    setPasswordError(validatePassword(e.target.value) ? "" : "비밀번호가 유효하지 않습니다.");
   }
 
-  const passwordError = (value: string) => {
-    if (!value) return;
-    if (value.length < 8) {
-      return "비밀번호가 유효하지 않습니다.";
-    }
-  }
+  // const passwordError = (value: string) => {
+  //   if (!value) return;
+  //   if (value.length < 8) {
+  //     return "비밀번호가 유효하지 않습니다.";
+  //   }
+  // }
 
-  const passwordErrorMsg = passwordError(password);
+  // const passwordErrorMsg = validatePassword(password) ? "" : "비밀번호가 유효하지 않습니다.";
 
   const handleRememberMe = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRememberMe(e.target.checked);
@@ -38,12 +44,14 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (emailErrorMsg) alert(emailErrorMsg);
-    if (passwordErrorMsg) alert(passwordErrorMsg);
+    if (emailError) alert(emailError);
+    if (passwordError) alert(passwordError);
     if (rememberMe) {
       localStorage.setItem("email", email)
+      localStorage.setItem("rememberMe", "true");
     } else {
       localStorage.removeItem("email");
+      localStorage.removeItem("rememberMe");
     }
     console.log("로그인 : ", {email}, {password}, {rememberMe});
     console.log("localStorage : ", localStorage.getItem("email"));
@@ -66,9 +74,9 @@ export default function Login() {
               onChange={handleEmailChange}
               required
             />
-            {emailErrorMsg && 
+            {emailError && 
               <p className="mt-2 text-sm text-rose-500">
-                {emailErrorMsg}
+                {emailError}
               </p>
             }
           </div>
@@ -92,9 +100,9 @@ export default function Login() {
                 <img src={visible ? "/eyes.svg" : "/eyes-closed.svg"} alt="Toggle password visibility" />
               </button>
             </div>
-            {passwordErrorMsg && 
+            {passwordError && 
               <p className="mt-2 text-sm text-rose-500">
-                비밀번호가 유효하지 않습니다.
+                {passwordError}
               </p>
             }
           </div>
