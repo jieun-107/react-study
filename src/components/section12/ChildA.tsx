@@ -1,12 +1,16 @@
 import React from "react";
 import ChildB from "./ChildB";
 
-export default React.memo(function ChildA() {
+export default React.memo(function ChildA({
+  increment,
+}: {
+  increment: () => void;
+}) {
   console.log("ChildA");
   return (
     <>
       <h1>ChildA Component</h1>
       <ChildB />
     </>
-  )
-})
+  );
+});

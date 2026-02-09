@@ -1,13 +1,16 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import ChildA from "./ChildA";
 
 export default function Ex01() {
   const [count, setCount] = useState(0);
+  const increment = useCallback(() => {
+    setCount((count) => count + 1);
+  }, []);
   return (
     <>
       <h1>count: {count}</h1>
       <button onClick={() => setCount((count) => count + 1)}>증가</button>
-      <ChildA />
+      <ChildA increment={increment} />
     </>
   )
 }
