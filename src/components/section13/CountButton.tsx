@@ -1,7 +1,8 @@
-import useCounter from "../context/counter/useCounter";
+import { useCounterAction } from "../context/counter/useCounter";
 
 export default function CountButton() {
-  const { decrement, reset, increment } = useCounter();
+  const { decrement, reset, increment } = useCounterAction();
+  console.log("CountButton");
   return (
     <>
       <button onClick={decrement}>감소</button>
