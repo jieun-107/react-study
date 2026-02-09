@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Ex01 from "./components/section12/Ex01";
+import Ex02 from "./components/section12/Ex02";
 // import Ex01 from "./components/section11/Ex01";
 // import Input from "./components/uncontrolled/Input";
 // import Checkbox from "./components/uncontrolled/Checkbox";
@@ -98,8 +99,8 @@ export default function App() {
       {/* <Ex01 /> */}
 
       {/* ===================== Section 12 =================== */}
-      <Ex01 />
-
+      {/* <Ex01 /> */}
+      <Ex02 />
     </>
   );
 }
