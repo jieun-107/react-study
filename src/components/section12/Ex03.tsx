@@ -1,4 +1,4 @@
-import React, { lazy, useState } from "react"
+import React, { lazy, Suspense, useState } from "react"
 // import ChildD from "./ChildD";
 // import ChildE from "./ChildE";
 
@@ -13,8 +13,13 @@ export default function Ex03() {
       <button onClick={() => setIsShow((isShow) => !isShow)}>토글</button>
       {isShow && (
         <>
-          <ChildD />
-          <ChildE />
+          {/* Suspense : 아직 준비 안 된 컴포넌트를 기다리는 동안 대신 보여줄 화면 */}
+          <Suspense fallback={<h1>ChildD Loading...</h1>}> 
+            <ChildD />
+          </Suspense>
+          <Suspense fallback={<h1>ChildE Loading...</h1>}>
+            <ChildE />
+          </Suspense>
         </>
       )}
     </>
