@@ -1,5 +1,8 @@
 export default function ChildD() {
-  console.log("ChildD");
+  const randomNum = Math.floor(Math.random() * 2) + 1; // 1 ~ 2
+  if (randomNum === 1) {
+    throw new Error("random number is 1");
+  }
   return (
     <>
       <h1>ChildD Component</h1>
