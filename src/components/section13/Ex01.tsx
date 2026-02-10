@@ -1,14 +1,21 @@
 import Count from "./Count";
 import CountOutside from "./CountOutside";
-import CounterProvider from "../context/counter/CounterProvider";
+import ThemeProvider from "../../context/theme/ThemeProvider";
+import Theme from "./Theme";
+import ThemeButton from "./ThemeButton";
+import CounterProvider from "../../context/counter/CounterProvider";
 
 export default function Ex01() {
   return (
     <>
-      <CounterProvider>
-        <Count />
-        <CountOutside />
-      </CounterProvider>
+      <ThemeProvider>
+        <CounterProvider>
+          <Count />
+          <CountOutside />
+          <Theme />
+          <ThemeButton />
+        </CounterProvider>
+      </ThemeProvider>
     </>
   );
 }

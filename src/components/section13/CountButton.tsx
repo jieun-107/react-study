@@ -1,4 +1,4 @@
-import { useCounterAction } from "../context/counter/useCounter";
+import { useCounterAction } from "../../context/counter/useCounter";
 
 export default function CountButton() {
   const countDispatch = useCounterAction();

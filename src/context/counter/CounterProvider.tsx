@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import { CounterContext, CounterContextAction } from "./CounterContext";
-import counterReducer from "../../../reducer/counterReducer";
+import counterReducer from "../../reducer/counterReducer";
 
 export default function CounterProvider({
   children,
