@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 // import "./styles/index.css";
 import "./css/index.css";
 import App from "./App.tsx";
+import { Provider } from "react-redux";
+import { store } from "./store/store.ts";
 
 createRoot(document.getElementById("root")!).render(
   /**
@@ -11,6 +13,8 @@ createRoot(document.getElementById("root")!).render(
    * 이 동작은 배포(프로덕션) 환경에서는 발생하지 않음.
    */
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>
 );
