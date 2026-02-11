@@ -4,6 +4,8 @@ import { useState } from "react";
 import Ex03 from "./components/section12/Ex03";
 import Ex01 from "./components/section13/Ex01";
 import ScrollComparison from "./components/section13/ScrollComparison";
+import Counter from "./components/section6/Counter";
+import Count from "./components/section14/Count";
 // import Ex01 from "./components/section11/Ex01";
 // import Input from "./components/uncontrolled/Input";
 // import Checkbox from "./components/uncontrolled/Checkbox";
@@ -108,7 +110,11 @@ export default function App() {
 
       {/* ===================== Section 13 =================== */}
       {/* <Ex01 /> */}
-      <ScrollComparison />
+      {/* <ScrollComparison /> */}
+
+      {/* ===================== Section 14 =================== */}
+      <Count />
+
     </>
   );
 }
