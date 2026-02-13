@@ -3,7 +3,7 @@ import {
   decrement,
   incrementAsync,
   reset,
-} from "../../store/features/counter/CounterSlice";
+} from "../../store/features/counter/counterSlice";
 import type { AppDispatch } from "../../store/store";
 
 export default function CountButton() {

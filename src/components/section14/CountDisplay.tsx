@@ -6,7 +6,7 @@ export default function CountDisplay() {
 
   return (
     <>
-      <h1>Count: {count}</h1>
+      <h1 className="text-2xl">Count: {count}</h1>
     </>
   );
 }

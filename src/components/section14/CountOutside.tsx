@@ -5,7 +5,7 @@ export default function CountOutside() {
   const count = useSelector((state:RootState) => state.counter.count);
   return (
     <>
-      <h1>CountOutside: {count}</h1>
+      <h1 className="text-2xl">CountOutside: {count}</h1>
     </>
   );
 }
