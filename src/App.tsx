@@ -1,11 +1,12 @@
 import { useState } from "react";
 // import Ex01 from "./components/section12/Ex01";
 // import Ex02 from "./components/section12/Ex02";
-import Ex03 from "./components/section12/Ex03";
-import Ex01 from "./components/section13/Ex01";
+// import Ex03 from "./components/section12/Ex03";
+// import Ex01 from "./components/section13/Ex01";
 import ScrollComparison from "./components/section13/ScrollComparison";
 import Counter from "./components/section6/Counter";
 import Count from "./components/section14/Count";
+import Ex01 from "./components/section17/Ex01";
 // import Ex01 from "./components/section11/Ex01";
 // import Input from "./components/uncontrolled/Input";
 // import Checkbox from "./components/uncontrolled/Checkbox";
@@ -113,8 +114,10 @@ export default function App() {
       {/* <ScrollComparison /> */}
 
       {/* ===================== Section 14 =================== */}
-      <Count />
+      {/* <Count /> */}
 
+      {/* ===================== Section 17 =================== */}
+      <Ex01 />
     </>
   );
 }
