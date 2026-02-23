@@ -10,6 +10,7 @@ import Ex01 from "./components/section17/Ex01";
 import Ex02 from "./components/section17/Ex02";
 import Ex03 from "./components/section17/Ex03";
 import Ex04 from "./components/section17/Ex04";
+import Ex05 from "./components/section17/Ex05";
 // import Ex01 from "./components/section11/Ex01";
 // import Input from "./components/uncontrolled/Input";
 // import Checkbox from "./components/uncontrolled/Checkbox";
@@ -123,7 +124,9 @@ export default function App() {
       {/* <Ex01 /> */}
       {/* <Ex02 /> */}
       {/* <Ex03 /> */}
-      <Ex04 />
+      {/* <Ex04 /> */}
+      <Ex05 />
+    
     </>
   );
 }
