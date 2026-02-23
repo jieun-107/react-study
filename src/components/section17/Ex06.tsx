@@ -1,6 +1,9 @@
 import { Suspense } from "react";
 import { axiosInstance } from "../../api/axios";
 import Posts from "./Posts";
+import { ErrorBoundary } from "react-error-boundary";
+import Error from "./Error";
+import Loading from "./Loading";
 
 async function fetchPosts() {
   const { data } = await axiosInstance.get("/posts");
@@ -10,9 +13,11 @@ async function fetchPosts() {
 export default function Ex06() {
   return (
     <>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Posts promise={fetchPosts()} />
-      </Suspense>
+      <ErrorBoundary FallbackComponent={Error}>
+         <Suspense fallback={<Loading />}>
+           <Posts promise={fetchPosts()} /> {/* Promise 객체를 Posts 컴포넌트에 전달 */}
+         </Suspense>
+      </ErrorBoundary>
     </>
   )
 }
