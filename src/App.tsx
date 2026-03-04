@@ -13,6 +13,7 @@ import Ex04 from "./components/section17/Ex04";
 import Ex05 from "./components/section17/Ex05";
 import Ex06 from "./components/section17/Ex06";
 import Fetch from "./components/section16/Fetch";
+import FetchCrud from "./components/section16/FetchCrud";
 // import Ex01 from "./components/section11/Ex01";
 // import Input from "./components/uncontrolled/Input";
 // import Checkbox from "./components/uncontrolled/Checkbox";
@@ -123,7 +124,8 @@ export default function App() {
       {/* <Count /> */}
 
       {/* ===================== Section 17 =================== */}
-      <Fetch />
+      {/* <Fetch /> */}
+      <FetchCrud />
 
       {/* ===================== Section 17 =================== */}
       {/* <Ex01 /> */}
