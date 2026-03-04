@@ -15,6 +15,7 @@ import Ex06 from "./components/section17/Ex06";
 import Fetch from "./components/section16/Fetch";
 import FetchCrud from "./components/section16/FetchCrud";
 import AxiosCrud from "./components/section16/AxiosCrud";
+import Axios from "./components/section16/Axios";
 // import Ex01 from "./components/section11/Ex01";
 // import Input from "./components/uncontrolled/Input";
 // import Checkbox from "./components/uncontrolled/Checkbox";
@@ -127,7 +128,8 @@ export default function App() {
       {/* ===================== Section 17 =================== */}
       {/* <Fetch /> */}
       {/* <FetchCrud /> */}
-      <AxiosCrud />
+      {/* <AxiosCrud /> */}
+      <Axios />
 
       {/* ===================== Section 17 =================== */}
       {/* <Ex01 /> */}
