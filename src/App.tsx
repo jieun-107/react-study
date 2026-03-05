@@ -128,8 +128,8 @@ export default function App() {
       {/* ===================== Section 17 =================== */}
       {/* <Fetch /> */}
       {/* <FetchCrud /> */}
-      {/* <AxiosCrud /> */}
-      <Axios />
+      <AxiosCrud />
+      {/* <Axios /> */}
 
       {/* ===================== Section 17 =================== */}
       {/* <Ex01 /> */}
